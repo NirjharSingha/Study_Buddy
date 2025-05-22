@@ -13,13 +13,13 @@ export default function AboutPage() {
         "Tahshina is a product designer focused on creating user-centric digital experiences.",
     },
     {
-      name: "S.M. Imran Rahman",
+      name: "Fardin Faiaz",
       imageUrl: "/profile.jpg", // Replace with actual image path
       description:
         "Imran is a software engineer with a passion for web development and AI.",
     },
     {
-      name: "Nirjhor Singha",
+      name: "Nirjhar Singha",
       imageUrl: "/profile.jpg", // Replace with actual image path
       description:
         "Nirjhor is a data scientist who specializes in machine learning and big data analysis.",

@@ -87,7 +87,7 @@ export default function Navbar() {
             width={60}
             height={60}
           />
-          ToTo Company
+          StudyBuddy
         </Link>
       </div>
       <ul className={styles.navLinks}>

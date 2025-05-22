@@ -34,13 +34,31 @@ export default function SubjectsSection() {
               <h3 className={styles.subjectTitle}>{subject.name}</h3>
               <p className={styles.subjectDescription}>{subject.description}</p>
               <Link
-                href={`/resources/${subject.name}`}
+                href={`/subjects/${subject.name.toLowerCase()}`}
                 className={styles.courseLink}
               >
                 View Resources →
               </Link>
             </div>
           ))}
+        </div>
+        <div className={styles.buttonContainer}>
+          <a
+            href="http://localhost:3001"
+            className={styles.simulationButton}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Simulation
+          </a>
+          <a
+            href="http://localhost:3001"
+            className={styles.quizButton}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quiz
+          </a>
         </div>
       </div>
     </section>
