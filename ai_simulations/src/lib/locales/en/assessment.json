@@ -1,0 +1,37 @@
+{
+    "assessmentTitle": "Interactive Assessment",
+    "assessmentDescription": "Test your knowledge with AI-generated questions",
+    "generateAssessment": "Generate Assessment",
+    "enterTopic": "Enter a topic (e.g., Chemistry, Physics, Biology)",
+    "generating": "Generating...",
+    "generate": "Generate",
+    "question": "Question",
+    "writeYourAnswer": "Write your answer here...",
+    "uploadImage": "Upload Image (Optional)",
+    "submit": "Submit Assessment",
+    "submitting": "Submitting...",
+    "assessmentResults": "Assessment Results",
+    "submittedAt": "Submitted at",
+    "feedback": "Feedback",
+    "close": "Close",
+    "score": "Score",
+    "totalPoints": "Total Points",
+    "timeRemaining": "Time Remaining",
+    "minutes": "minutes",
+    "seconds": "seconds",
+    "availableTopics": "Available Topics",
+    "startNewAssessment": "Start New Assessment",
+    "error": {
+        "generateFailed": "Failed to generate assessment. Please try again.",
+        "submitFailed": "Failed to submit assessment. Please try again.",
+        "invalidTopic": "Please enter a valid topic.",
+        "timeUp": "Time's up! Your assessment will be submitted automatically."
+    },
+    "topics": {
+        "chemistry": "Test your knowledge of chemical reactions, elements, and compounds",
+        "physics": "Explore concepts of motion, energy, and forces",
+        "biology": "Learn about living organisms, cells, and ecosystems",
+        "mathematics": "Practice algebra, geometry, and calculus problems",
+        "computer science": "Test your programming and computational thinking skills"
+    }
+}
