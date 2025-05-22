@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  background-color: #333;
+  color: #fff;
+  position: sticky;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.logo img {
+  margin-right: 1rem;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center; /* Center the links */
+  align-items: center;
+  font-weight: bold; /* Make links bold */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navLinks li {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navLinks li a:hover {
+  color: #aaa;
+}
+
+.signIn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  background-color: #757b81;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.signIn:hover {
+  background-color: #f9fcff;
+  color: #000;
+}

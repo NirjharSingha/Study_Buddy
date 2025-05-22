@@ -1,0 +1,26 @@
+server:
+    port: 8080
+    error:
+        include-message: always
+    tomcat:
+        max-swallow-size: 500MB
+
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/IT_Hackathon_DB
+        username: root
+        password: 20NS01
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        open-in-view: true
+    servlet:
+        multipart:
+            max-file-size: 500MB
+            max-request-size: 500MB
+
+jwt:
+    secret: LnHMPrP4BbL4oSnP5HKlGTiCYFUn0y1jP4qyFy4sgS48QfzWcS5NBZsP9KwFwBxQ
+    expiration: 604800000

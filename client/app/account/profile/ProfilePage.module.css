@@ -1,0 +1,94 @@
+/* app/profile/ProfilePage.module.css */
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profileImage {
+  width: 150px; /* You can adjust the size */
+  height: 150px; /* Same as width to maintain a square aspect ratio */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image covers the circle without distortion */
+  border: 1.6px solid #333;
+  background-color: #ddd; /* Fallback color */
+}
+
+.profileInfo h1 {
+  font-size: 1.5rem;
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+  margin: 0;
+}
+
+.profession {
+  font-size: 1.1rem;
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #777;
+}
+
+.profileDetails {
+  width: 100%;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  gap: 1rem;
+  margin: 10px;
+}
+
+.detail strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.detail p {
+  margin: 0;
+}
+.updateButtonContainer {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */ /* Space between the profile and button */
+}
+
+.updateProfileBtn {
+  display: flex;
+  background-color: #3b3b3b; /* Green background */
+  justify-content: center; /* Center the button horizontally */ /* Space between the profile and button */
+  align-items: center;
+  gap: 0.5rem;
+  color: white; /* Text color */
+  border: none;
+  padding: 0.6rem 2.5rem; /* Button padding */
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2rem; /* Space between details and button */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.updateProfileBtn:hover {
+  background-color: #1e221f; /* Slightly darker green on hover */
+}

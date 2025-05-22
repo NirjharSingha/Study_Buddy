@@ -1,0 +1,110 @@
+/* app/account/Account.module.css */
+.accountContainer {
+  max-width: 0 auto;
+  max-height: 0 auto;
+  margin: 0 auto;
+
+  padding: 2rem;
+  height: calc(100vh - 69.4px);
+  background-color: #f5f7fa;
+  overflow-y: auto;
+}
+
+.accountHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.accountHeader h1 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.accountHeader p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  max-width: 420px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.card h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description {
+  color: #718096;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.featuresList {
+  margin-top: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.checkIcon {
+  color: #48bb78;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .accountContainer {
+    padding: 1rem;
+  }
+
+  .accountHeader h1 {
+    font-size: 2rem;
+  }
+}
