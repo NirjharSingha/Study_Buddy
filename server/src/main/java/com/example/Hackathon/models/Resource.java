@@ -18,7 +18,8 @@ public class Resource {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
-    @Column(length = 1000)
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String content;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
@@ -26,4 +27,5 @@ public class Resource {
     private String tag;
     private String type;
     private Timestamp datePublished;
+    private int classNumber;
 }

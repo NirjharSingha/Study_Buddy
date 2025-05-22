@@ -42,6 +42,7 @@ const AddVideoDialog = ({ dialogRef, isEdit, video, setReloadFlag }) => {
   const { setToastMessage } = useGlobals();
   const [isEditing] = useState(false);
   const [newAttachments, setNewAttachments] = useState([]);
+  const [classNumber, setClassNumber] = useState("");
 
   const handleFileChange = (event) => {
     const files = event.target.files;
@@ -50,7 +51,12 @@ const AddVideoDialog = ({ dialogRef, isEdit, video, setReloadFlag }) => {
   };
 
   const handleSubmit = async () => {
-    if (name === "" || category === "" || description === "") {
+    if (
+      name === "" ||
+      category === "" ||
+      description === "" ||
+      classNumber === ""
+    ) {
       setWarning("Fill necessary information");
       return;
     }
@@ -61,6 +67,7 @@ const AddVideoDialog = ({ dialogRef, isEdit, video, setReloadFlag }) => {
     formData.append("content", description);
     formData.append("type", "Video");
     formData.append("author", jwtDecode(localStorage.getItem("token")).sub);
+    formData.append("classNumber", classNumber);
     if (!isEdit) {
       newAttachments.forEach((file) => {
         formData.append("attachments", file);
@@ -124,11 +131,13 @@ const AddVideoDialog = ({ dialogRef, isEdit, video, setReloadFlag }) => {
                 setName("");
                 setCategory("");
                 setDescription("");
+                setClassNumber("");
               } else {
                 setNewAttachments(video.files);
                 setName(video.title);
                 setCategory(video.tag);
                 setDescription(video.content);
+                setClassNumber(video.classNumber);
               }
             }, 100);
           }}
@@ -192,6 +201,14 @@ const AddVideoDialog = ({ dialogRef, isEdit, video, setReloadFlag }) => {
                 value={category}
                 flag={false}
                 setValue={setCategory}
+                setWarning={setWarning}
+                isEditing={isEditing}
+              />
+              <UserData
+                label="Class"
+                value={classNumber}
+                flag={false}
+                setValue={setClassNumber}
                 setWarning={setWarning}
                 isEditing={isEditing}
               />

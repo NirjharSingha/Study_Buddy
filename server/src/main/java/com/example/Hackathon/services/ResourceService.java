@@ -24,4 +24,6 @@ public interface ResourceService {
     ResponseEntity<String> editVideo(List<MultipartFile> documents, ResourceDto resourceDto);
 
     ResponseEntity<String> toggleBookmark(String userId, int resourceId);
+
+    ResponseEntity<List<ResourceDto>> getAllResources();
 }

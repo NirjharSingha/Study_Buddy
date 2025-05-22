@@ -64,6 +64,7 @@ public class ResourceServiceImpl implements ResourceService {
                         .datePublished(resource.getDatePublished())
                         .files(fileDtos)
                         .isBookmarked(true)
+                        .classNumber(resource.getClassNumber())
                         .build();
                 resourceDtos.add(resourceDto);
             }
@@ -82,6 +83,7 @@ public class ResourceServiceImpl implements ResourceService {
                 .type(resourceDto.getType())
                 .tag(resourceDto.getTag())
                 .datePublished(new Timestamp(System.currentTimeMillis()))
+                .classNumber(resourceDto.getClassNumber())
                 .build();
         Resource savedResource = resourceRepository.save(resource);
 
@@ -107,6 +109,7 @@ public class ResourceServiceImpl implements ResourceService {
                 .type(resourceDto.getType())
                 .tag(resourceDto.getTag())
                 .datePublished(new Timestamp(System.currentTimeMillis()))
+                .classNumber(resourceDto.getClassNumber())
                 .build();
         Resource savedResource = resourceRepository.save(resource);
 
@@ -153,6 +156,7 @@ public class ResourceServiceImpl implements ResourceService {
                     .tag(resource.getTag())
                     .datePublished(resource.getDatePublished())
                     .files(fileDtos)
+                    .classNumber(resource.getClassNumber())
                     .build();
             resourceDtos.add(resourceDto);
         }
@@ -185,6 +189,7 @@ public class ResourceServiceImpl implements ResourceService {
                     .tag(resource.getTag())
                     .datePublished(resource.getDatePublished())
                     .files(fileDtos)
+                    .classNumber(resource.getClassNumber())
                     .build();
             resourceDtos.add(resourceDto);
         }
@@ -202,6 +207,7 @@ public class ResourceServiceImpl implements ResourceService {
                 .type(resourceDto.getType())
                 .tag(resourceDto.getTag())
                 .datePublished(new Timestamp(System.currentTimeMillis()))
+                .classNumber(resourceDto.getClassNumber())
                 .build();
         resourceRepository.save(resource);
         return ResponseEntity.ok("Video edited successfully");
@@ -228,5 +234,37 @@ public class ResourceServiceImpl implements ResourceService {
         } else {
             return ResponseEntity.badRequest().body("User or Resource not found");
         }
+    }
+
+    @Override
+    public ResponseEntity<List<ResourceDto>> getAllResources() {
+        List<Resource> resources = resourceRepository.findAll();
+        List<ResourceDto> resourceDtos = new ArrayList<>();
+        for (Resource resource : resources) {
+            List<File> files = fileRepository.findByResourceId(resource.getId());
+            List<FileDto> fileDtos = new ArrayList<>();
+            for (File file: files) {
+                fileDtos.add(FileDto.builder()
+                        .id(file.getId())
+                        .data(file.getData())
+                        .fileType(resource.getType().equals("Article") ? "image" : "video/mp4")
+                        .build());
+            }
+            Bookmarks bookmark = bookmarkRepository.findByUserIdAndResourceId(resource.getAuthor().getId(), resource.getId());
+            ResourceDto resourceDto = ResourceDto.builder()
+                    .id(resource.getId())
+                    .title(resource.getTitle())
+                    .content(resource.getContent())
+                    .author(resource.getAuthor().getId())
+                    .type(resource.getType())
+                    .tag(resource.getTag())
+                    .datePublished(resource.getDatePublished())
+                    .files(fileDtos)
+                    .classNumber(resource.getClassNumber())
+                    .isBookmarked(bookmark != null) // Check if the resource is bookmarked
+                    .build();
+            resourceDtos.add(resourceDto);
+        }
+        return ResponseEntity.ok(resourceDtos);
     }
 }

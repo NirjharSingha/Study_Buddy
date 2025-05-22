@@ -24,4 +24,5 @@ public class ResourceDto {
     private Timestamp datePublished;
     @JsonProperty("isBookmarked")
     private boolean isBookmarked;
+    private int classNumber;
 }

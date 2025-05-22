@@ -46,6 +46,7 @@ const AddArticleDialog = ({ dialogRef, isEdit, article, setReloadFlag }) => {
   const imageRef = useRef([]);
   const imageRef2 = useRef([]);
   const [previewFiles, setPreviewFiles] = useState([]);
+  const [classNumber, setClassNumber] = useState("");
 
   const handleFileChange = (event) => {
     const files = event.target.files;
@@ -80,7 +81,12 @@ const AddArticleDialog = ({ dialogRef, isEdit, article, setReloadFlag }) => {
   };
 
   const handleSubmit = async () => {
-    if (name === "" || category === "" || description === "") {
+    if (
+      name === "" ||
+      category === "" ||
+      description === "" ||
+      classNumber === ""
+    ) {
       setWarning("Fill necessary information");
       return;
     }
@@ -91,6 +97,7 @@ const AddArticleDialog = ({ dialogRef, isEdit, article, setReloadFlag }) => {
     formData.append("content", description);
     formData.append("type", "Article");
     formData.append("author", jwtDecode(localStorage.getItem("token")).sub);
+    formData.append("classNumber", classNumber);
     newAttachments.forEach((file) => {
       formData.append("attachments", file);
     });
@@ -156,6 +163,7 @@ const AddArticleDialog = ({ dialogRef, isEdit, article, setReloadFlag }) => {
                 setName("");
                 setCategory("");
                 setDescription("");
+                setClassNumber("");
               } else {
                 setPrevAttachments(article.files);
                 setNewAttachments([]);
@@ -163,6 +171,7 @@ const AddArticleDialog = ({ dialogRef, isEdit, article, setReloadFlag }) => {
                 setName(article.title);
                 setCategory(article.tag);
                 setDescription(article.content);
+                setClassNumber(article.classNumber);
               }
             }, 100);
           }}
@@ -270,6 +279,14 @@ const AddArticleDialog = ({ dialogRef, isEdit, article, setReloadFlag }) => {
                 value={category}
                 flag={false}
                 setValue={setCategory}
+                setWarning={setWarning}
+                isEditing={isEditing}
+              />
+              <UserData
+                label="Class"
+                value={classNumber}
+                flag={false}
+                setValue={setClassNumber}
                 setWarning={setWarning}
                 isEditing={isEditing}
               />

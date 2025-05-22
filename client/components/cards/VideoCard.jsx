@@ -46,7 +46,7 @@ const VideoCard = ({ video, setReloadFlag }) => {
 
   return (
     <div
-      className={`bg-white p-3 w-[28rem] h-[29.8rem] rounded-lg shadow-md border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg flex flex-col gap-2`}
+      className={`bg-white p-3 w-[28rem] h-[32.3rem] rounded-lg shadow-md border-2 border-gray-200 hover:border-gray-300 hover:shadow-lg flex flex-col gap-2`}
     >
       {video.files && video.files.length > 0 && (
         <video
@@ -65,6 +65,10 @@ const VideoCard = ({ video, setReloadFlag }) => {
       <div className="text-[1rem]">
         <span className="font-semibold">Owner : </span>
         {video.author}
+      </div>
+      <div className="text-[1rem]">
+        <span className="font-semibold">Class : </span>
+        {video.classNumber}
       </div>
       <p className="text-[1rem] line-clamp-3">
         <span className="font-semibold">Description : </span>

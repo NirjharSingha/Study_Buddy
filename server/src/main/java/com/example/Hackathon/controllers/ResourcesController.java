@@ -88,4 +88,9 @@ public class ResourcesController {
         System.out.println("Toggle Bookmark: " + userId + ", Resource ID: " + resourceId);
         return resourceService.toggleBookmark(userId, resourceId);
     }
+
+    @GetMapping("/getAll")
+    public ResponseEntity<List<ResourceDto>> getAllResources() {
+        return resourceService.getAllResources();
+    }
 }

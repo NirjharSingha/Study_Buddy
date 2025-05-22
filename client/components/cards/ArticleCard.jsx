@@ -46,7 +46,7 @@ const articleCard = ({ article, setReloadFlag }) => {
   };
 
   return (
-    <div className="card w-full lg:card-side bg-base-100 shadow-md border-[0.5px] border-t-[0.7px] border-gray-200 card-hover h-[17.4rem] mb-5">
+    <div className="card w-full lg:card-side bg-base-100 shadow-md border-[0.5px] border-t-[0.7px] border-gray-200 card-hover h-[18.7rem] mb-5">
       <img
         src={
           article.files.length > 0
@@ -70,6 +70,10 @@ const articleCard = ({ article, setReloadFlag }) => {
         <div className="text-[1rem]">
           <span className="font-semibold">Author : </span>
           {article.author}
+        </div>
+        <div className="text-[1rem]">
+          <span className="font-semibold">Class : </span>
+          {article.classNumber}
         </div>
         <p className="text-[1rem] line-clamp-3">
           <span className="font-semibold">Description : </span>

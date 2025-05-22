@@ -103,6 +103,10 @@ const ArticleDialog = ({ article, buttonRef }) => {
           <span className="font-semibold">Tag : </span>
           {article.tag}
         </div>
+        <div className="text-[1rem]">
+          <span className="font-semibold">Class : </span>
+          {article.classNumber}
+        </div>
         <p>{article.content}</p>
         <DialogFooter>
           <Button

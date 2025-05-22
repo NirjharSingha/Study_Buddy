@@ -8,8 +8,8 @@ import AddArticleDialog from "@/components/dialogs/AddArticleDialog";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import { useEffect } from "react";
-import ArticleCard from "@/components/cards/ArticleCard";
-import VideoCard from "@/components/cards/VideoCard";
+import ArticleCard from "@/components/cards/ArticleCard2";
+import VideoCard from "@/components/cards/VideoCard2";
 import AddVideoDialog from "@/components/dialogs/AddVideoDialog";
 
 const Page = () => {

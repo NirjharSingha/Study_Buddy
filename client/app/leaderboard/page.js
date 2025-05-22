@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import BarChart from "@/components/charts/BarChart";
+import Leaderboard from "@/components/charts/LeaderBoard";
 import LineChart from "@/components/charts/LineChart";
 import Doughnut from "@/components/charts/Doughnut";
 import PieChart from "@/components/charts/PieChart"; // Make sure this path is correct
@@ -67,12 +67,10 @@ export default function LeaderboardPage() {
         {/* Leaderboard Section */}
         <section>
           <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">
-            Leaderboard
+            CONTRIBUTIONS
           </h1>
-          <BarChart
-            allLabels={leaderboardData.map((entry) => entry.name)}
-            allData={leaderboardData.map((entry) => entry.points)}
-          />
+          <Leaderboard leaderboardData={leaderboardData} />
+
           <p className="text-center text-lg text-gray-600 mt-4">
             Your Rank: <span className="font-semibold">{rank}</span>
           </p>
