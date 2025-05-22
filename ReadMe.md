@@ -90,6 +90,16 @@ cd ../server
 mvn spring-boot:run
 ```
 
+In order to connect the database with backend do the following:
+
+- Run the following command in MySQL terminal or MySQL Workbench.
+
+```mysql
+create database if not exists IT_Hackathon_DB;
+```
+
+- Inside "/server/src/main/resources/application.yml", update spring.datasource.username & spring.datasource.password. Give your own credentials here. 
+
 ### 🔧 Run ai_simulations
 
 ```bash
@@ -125,4 +135,5 @@ npm run dev
   - In-app store for learning tools and simulations
 
 ---
+
 
