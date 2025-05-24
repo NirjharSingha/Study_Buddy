@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/physics-lab/projectile/page": "app/physics-lab/projectile/page.js",
+  "/physics-lab/page": "app/physics-lab/page.js",
+  "/simulations/dinosaur-ar/page": "app/simulations/dinosaur-ar/page.js",
+  "/physics-lab/solar-system/page": "app/physics-lab/solar-system/page.js",
+  "/physics-lab/pendulum/page": "app/physics-lab/pendulum/page.js"
+}

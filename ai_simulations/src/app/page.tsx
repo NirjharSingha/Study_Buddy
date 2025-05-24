@@ -39,7 +39,18 @@ export default function Home() {
                             </Link>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow md:col-span-2">
+                        <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                            <h2 className="text-2xl font-semibold mb-4 text-gray-900">Physics Lab</h2>
+                            <p className="text-gray-600 mb-4">Explore interactive physics simulations including pendulum motion, projectile motion, and a solar system model.</p>
+                            <Link
+                                href="/physics-lab"
+                                className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+                            >
+                                Launch Physics Lab
+                            </Link>
+                        </div>
+
+                        <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                             <h2 className="text-2xl font-semibold mb-4 text-gray-900">{t('dinosaurAR')}</h2>
                             <p className="text-gray-600 mb-4">{t('dinosaurARDescription')}</p>
                             <Link
