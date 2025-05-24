@@ -16,14 +16,14 @@ export default function Home() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div className="min-h-screen bg-gradient-to-b from-blue-900 to-black text-white">
             <Navigation />
             <main className="max-w-7xl mx-auto py-12 sm:px-6 lg:px-8">
                 <div className="px-4 py-6 sm:px-0">
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+                        className="text-5xl font-bold mb-12 text-center text-white"
                     >
                         {t('home')}
                     </motion.h1>
@@ -34,15 +34,15 @@ export default function Home() {
                             initial="hidden"
                             animate="visible"
                             transition={{ delay: 0.1 }}
-                            className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-blue-100"
+                            className="bg-blue-800/50 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-blue-600"
                         >
-                            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                            <h2 className="text-2xl font-bold mb-4 text-white">
                                 {t('simulation')}
                             </h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed">{t('description')}</p>
+                            <p className="text-gray-200 mb-6 leading-relaxed">{t('description')}</p>
                             <Link
                                 href="/simulations/double-pendulum"
-                                className="inline-block bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
+                                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
                             >
                                 {t('simulation')}
                             </Link>
@@ -53,15 +53,15 @@ export default function Home() {
                             initial="hidden"
                             animate="visible"
                             transition={{ delay: 0.2 }}
-                            className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-purple-100"
+                            className="bg-blue-800/50 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-blue-600"
                         >
-                            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                            <h2 className="text-2xl font-bold mb-4 text-white">
                                 {t('chemistryLab')}
                             </h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed">{t('chemistryLabDescription')}</p>
+                            <p className="text-gray-200 mb-6 leading-relaxed">{t('chemistryLabDescription')}</p>
                             <Link
                                 href="/simulations/chemistry-lab"
-                                className="inline-block bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all shadow-md hover:shadow-lg"
+                                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
                             >
                                 {t('chemistryLab')}
                             </Link>
@@ -72,17 +72,17 @@ export default function Home() {
                             initial="hidden"
                             animate="visible"
                             transition={{ delay: 0.3 }}
-                            className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-indigo-100"
+                            className="bg-blue-800/50 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-blue-600"
                         >
-                            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-indigo-800 bg-clip-text text-transparent">
+                            <h2 className="text-2xl font-bold mb-4 text-white">
                                 Physics Lab
                             </h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed">
+                            <p className="text-gray-200 mb-6 leading-relaxed">
                                 Explore interactive physics simulations including pendulum motion, projectile motion, and a solar system model.
                             </p>
                             <Link
                                 href="/physics-lab"
-                                className="inline-block bg-gradient-to-r from-indigo-600 to-indigo-700 text-white px-6 py-3 rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition-all shadow-md hover:shadow-lg"
+                                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
                             >
                                 Launch Physics Lab
                             </Link>
@@ -93,15 +93,15 @@ export default function Home() {
                             initial="hidden"
                             animate="visible"
                             transition={{ delay: 0.4 }}
-                            className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-pink-100"
+                            className="bg-blue-800/50 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all border border-blue-600"
                         >
-                            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-pink-800 bg-clip-text text-transparent">
+                            <h2 className="text-2xl font-bold mb-4 text-white">
                                 {t('dinosaurAR')}
                             </h2>
-                            <p className="text-gray-600 mb-6 leading-relaxed">{t('dinosaurARDescription')}</p>
+                            <p className="text-gray-200 mb-6 leading-relaxed">{t('dinosaurARDescription')}</p>
                             <Link
                                 href="/simulations/dinosaur-ar"
-                                className="inline-block bg-gradient-to-r from-pink-600 to-pink-700 text-white px-6 py-3 rounded-lg hover:from-pink-700 hover:to-pink-800 transition-all shadow-md hover:shadow-lg"
+                                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
                             >
                                 {t('dinosaurAR')}
                             </Link>
@@ -114,7 +114,7 @@ export default function Home() {
                         transition={{ delay: 0.5 }}
                         className="mt-16"
                     >
-                        <h2 className="text-4xl font-bold mb-10 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        <h2 className="text-4xl font-bold mb-10 text-center text-white">
                             AI Assessment
                         </h2>
                         <AssessmentNav />

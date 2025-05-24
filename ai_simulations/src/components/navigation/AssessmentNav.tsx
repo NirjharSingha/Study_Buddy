@@ -36,10 +36,10 @@ export const AssessmentNav: React.FC = () => {
     };
 
     return (
-        <div className="bg-white/80 backdrop-blur-sm shadow-xl rounded-xl p-8 border border-blue-100">
+        <div className="bg-blue-800/50 backdrop-blur-sm shadow-xl rounded-xl p-8 border border-blue-600">
             <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold mb-6 text-gray-900">AI Assessment</h2>
-                <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+                <h2 className="text-3xl font-bold mb-6 text-white">AI Assessment</h2>
+                <p className="text-gray-200 mb-8 text-lg leading-relaxed">
                     Test your knowledge with our interactive assessments. Choose a topic to begin your learning journey.
                 </p>
 
@@ -49,7 +49,7 @@ export const AssessmentNav: React.FC = () => {
                     animate="visible"
                     className="space-y-6"
                 >
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Available Topics</h3>
+                    <h3 className="text-xl font-semibold text-white mb-4">Available Topics</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {API_CONFIG.TOPICS.map((topic) => (
                             <motion.div
@@ -58,14 +58,14 @@ export const AssessmentNav: React.FC = () => {
                             >
                                 <Link
                                     href={`/assessment?topic=${encodeURIComponent(topic)}`}
-                                    className="block p-6 rounded-lg hover:shadow-lg transition-all bg-white border border-gray-100 hover:border-blue-200"
+                                    className="block p-6 rounded-lg hover:shadow-lg transition-all bg-blue-700/50 border border-blue-500 hover:border-blue-400"
                                 >
-                                    <h4 className="font-semibold text-lg mb-2 text-gray-900 capitalize">
+                                    <h4 className="font-semibold text-lg mb-2 text-white capitalize">
                                         {topic.split('-').map(word =>
                                             word.charAt(0).toUpperCase() + word.slice(1)
                                         ).join(' ')}
                                     </h4>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                    <p className="text-gray-200 text-sm leading-relaxed">
                                         {getTopicDescription(topic)}
                                     </p>
                                 </Link>
@@ -77,7 +77,7 @@ export const AssessmentNav: React.FC = () => {
                 <div className="mt-8 text-center">
                     <Link
                         href="/assessment"
-                        className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg text-lg font-semibold"
+                        className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all shadow-md hover:shadow-lg text-lg font-semibold"
                     >
                         Start New Assessment
                     </Link>
