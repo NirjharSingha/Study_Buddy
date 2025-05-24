@@ -1,7 +1,0 @@
-{
-  "/physics-lab/solar-system/page": "app/physics-lab/solar-system/page.js",
-  "/simulations/dinosaur-ar/page": "app/simulations/dinosaur-ar/page.js",
-  "/physics-lab/pendulum/page": "app/physics-lab/pendulum/page.js",
-  "/page": "app/page.js",
-  "/assessment/page": "app/assessment/page.js"
-}
