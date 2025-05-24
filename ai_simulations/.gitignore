@@ -13,6 +13,8 @@ node_modules/
 /out/
 .next/
 next-env.d.ts
+**/*.node
+**/*.dll
 
 # Production
 /build
@@ -55,3 +57,11 @@ Thumbs.db
 *.pid
 *.seed
 *.pid.lock
+
+# Large files
+*.map
+*.node
+*.dll
+**/swc/
+**/lightningcss/
+**/sharp/
