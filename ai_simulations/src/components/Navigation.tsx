@@ -18,14 +18,6 @@ export const Navigation: React.FC = () => {
                             </span>
                         </Link>
                     </div>
-                    <div className="flex items-center space-x-4">
-                        <Link
-                            href="/assessment"
-                            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
-                        >
-                            {t('assessmentTitle')}
-                        </Link>
-                    </div>
                 </div>
             </div>
         </nav>

@@ -80,7 +80,7 @@ export default function AssessmentPage() {
                     ) : (
                         <div className="text-center">
                             <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                                {t('assessmentTitle')}
+                                {t('AI Assesment')}
                             </h1>
                             <p className="text-gray-600 mb-8">{t('assessmentDescription')}</p>
                             <button
